@@ -1,0 +1,15 @@
+.layout {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.layout__content {
+  padding: 24px 24px 0 24px;
+  overflow: auto;
+  position: relative;
+}
+
+.footer {
+  text-align: center;
+  padding: 8px 0;
+}
