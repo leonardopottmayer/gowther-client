@@ -17,4 +17,16 @@ export class AuthenticationService {
       throw new Error(err.response?.data.errorMessage);
     }
   }
+
+  public async register(
+    params: LoginRequestDto
+  ): Promise<DefaultApiResponse<number>> {
+    try {
+      const endpoint = `/api/${CONTROLLER}/register`;
+      const response = await api.post(endpoint, params);
+      return response.data as DefaultApiResponse<number>;
+    } catch (err: any) {
+      throw new Error(err.response?.data.errorMessage);
+    }
+  }
 }

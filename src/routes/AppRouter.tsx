@@ -5,7 +5,8 @@ import DefaultLayout from "../layout/default/DefaultLayout";
 import Home from "../pages/home/Home";
 import FinanceWallet from "../pages/modules/finances/fnc001_wallet/FNC001_Wallet";
 import FinanceTransaction from "../pages/modules/finances/fnc002_transaction/FNC002_Transaction";
-import LoginPage from "../pages/modules/login/Login";
+import LoginPage from "../pages/authentication/login/Login";
+import RegisterPage from "../pages/authentication/register/Register";
 
 const AppRouter = () => {
   const { isAuthenticated } = useAuth();
@@ -28,6 +29,7 @@ const AppRouter = () => {
         )}
         <Route path="/auth" element={<AuthenticationLayout />}>
           <Route path="/auth/login" element={<LoginPage />} />
+          <Route path="/auth/register" element={<RegisterPage />} />
         </Route>
       </Routes>
     </>

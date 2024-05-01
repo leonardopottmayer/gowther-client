@@ -48,8 +48,10 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
         setUser(tokenInfo.user);
       }
     } else {
-      clearApplicationLocalStorage();
-      navigate("/auth/login");
+      if (!document.URL.includes("/auth/register")) {
+        clearApplicationLocalStorage();
+        navigate("/auth/login");
+      }
     }
   }, []);
 
