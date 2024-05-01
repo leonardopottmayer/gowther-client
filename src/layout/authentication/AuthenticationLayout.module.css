@@ -1,0 +1,9 @@
+.layout {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.footer {
+  text-align: center;
+  padding: 8px 0;
+}
